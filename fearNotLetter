@@ -1,0 +1,12 @@
+function fearNotLetter(str) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!alphabet.match(str)) {
+    return alphabet.slice(alphabet.indexOf(str[0]), alphabet.indexOf(str[str.length - 1])).split('').filter((element) => !str.match(element)).join(); 
+  /*
+  ^This line slices the alphabet between the first letter of the string and the last, then splits that section into an array,
+  creates another array for the unmatched letter and, finally, turns that array into a string and returns it. 
+  */
+  }
+}
+
+fearNotLetter("abcdefghjklmno");
